@@ -9,3 +9,5 @@ D:\projetos\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.Ass
 D:\projetos\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.csproj.CopyComplete
 D:\projetos\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.dll
 D:\projetos\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.pdb
+D:\projetos\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.runtimeconfig.json
+D:\projetos\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.runtimeconfig.dev.json

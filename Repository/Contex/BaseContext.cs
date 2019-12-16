@@ -5,7 +5,7 @@ namespace Repository.Contex
 {
     public class BaseContext : DbContext
     {
-        public static string _connectionString = @"Server=localhost;Port=5432;Database=encartes;User Id=postgres;Password=root;";
+        public static string _connectionString = @"Server=localhost;Port=5432;Database=controle_ponto;User Id=postgres;Password=root;";
 
         public BaseContext()
         {
