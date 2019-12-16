@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Domain
 {
@@ -11,5 +11,12 @@ namespace Domain
         public DateTime Data { get; set; }
 
         public IList<Registro> Registros { get; set; }
+
+        public static void Map(ModelBuilder modelBuilder)
+        {
+            var map = modelBuilder.Entity<Dia>();
+            map.HasKey(x => x.Id);
+            map.Property(x => x.Id).ValueGeneratedOnAdd();
+        }
     }
 }
