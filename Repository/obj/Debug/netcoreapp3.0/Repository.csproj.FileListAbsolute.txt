@@ -11,3 +11,16 @@ D:\projetos\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.dll
 D:\projetos\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.pdb
 D:\projetos\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.runtimeconfig.json
 D:\projetos\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.runtimeconfig.dev.json
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.deps.json
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.runtimeconfig.json
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.runtimeconfig.dev.json
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.dll
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Repository.pdb
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Domain.dll
+D:\Git\Net_core\api_controle_ponto\Repository\bin\Debug\netcoreapp3.0\Domain.pdb
+D:\Git\Net_core\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.csprojAssemblyReference.cache
+D:\Git\Net_core\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.AssemblyInfoInputs.cache
+D:\Git\Net_core\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.AssemblyInfo.cs
+D:\Git\Net_core\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.csproj.CopyComplete
+D:\Git\Net_core\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.dll
+D:\Git\Net_core\api_controle_ponto\Repository\obj\Debug\netcoreapp3.0\Repository.pdb

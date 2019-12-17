@@ -959,23 +959,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yuri\\.nuget\\packages\\": {},
+    "C:\\Users\\Yuri\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\api_controle_ponto\\Repository\\Repository.csproj",
+      "projectUniqueName": "D:\\Git\\Net_core\\api_controle_ponto\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "D:\\projetos\\api_controle_ponto\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\yuri\\.nuget\\packages\\",
-      "outputPath": "D:\\projetos\\api_controle_ponto\\Repository\\obj\\",
+      "projectPath": "D:\\Git\\Net_core\\api_controle_ponto\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\Yuri\\.nuget\\packages\\",
+      "outputPath": "D:\\Git\\Net_core\\api_controle_ponto\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\yuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Yuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -988,8 +988,8 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "D:\\projetos\\api_controle_ponto\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\projetos\\api_controle_ponto\\Domain\\Domain.csproj"
+            "D:\\Git\\Net_core\\api_controle_ponto\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Git\\Net_core\\api_controle_ponto\\Domain\\Domain.csproj"
             }
           }
         }
