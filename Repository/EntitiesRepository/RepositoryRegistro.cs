@@ -2,7 +2,7 @@
 
 namespace Repository.EntitiesRepository
 {
-    public class Repository_Registro : Repository<Registro>
+    public class RepositoryRegistro : Repository<Registro>
     {
     }
 }

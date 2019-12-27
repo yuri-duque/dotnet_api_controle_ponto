@@ -2,7 +2,7 @@
 
 namespace Repository.EntitiesRepository
 {
-    public class Repository_Dia : Repository<Dia>
+    public class RepositoryDia : Repository<Dia>
     {
     }
 }

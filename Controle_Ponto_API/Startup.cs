@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -69,6 +70,8 @@ namespace Controle_Ponto_API
                     .AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
                     .RequireAuthenticatedUser().Build());
             });
+
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -96,8 +99,7 @@ namespace Controle_Ponto_API
                 endpoints.MapControllers();
             });
 
-            var userRepository = new Repository_User();
-            userRepository.Save(new User() { UserName = "admin", Password = "admin", Email = "yuri@handcom.com.br" });
+            new IdentityInitializer().Initialize();
         }
     }
 }

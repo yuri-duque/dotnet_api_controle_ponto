@@ -59,17 +59,49 @@ namespace Repository.Migrations
 
             modelBuilder.Entity("Domain.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
+                        .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<string>("Email")
-                        .HasColumnType("text")
-                        .IsUnicode(true);
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("integer");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("ConcurrencyStamp")
                         .HasColumnType("text");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("text");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("UserName")
                         .HasColumnType("text")
@@ -80,11 +112,40 @@ namespace Repository.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("Domain.UserRoles", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<long>("IdUser")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Role")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdUser");
+
+                    b.ToTable("UsersRoles");
+                });
+
             modelBuilder.Entity("Domain.Registro", b =>
                 {
                     b.HasOne("Domain.Dia", "Dia")
                         .WithMany("Registros")
                         .HasForeignKey("IdDia")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.UserRoles", b =>
+                {
+                    b.HasOne("Domain.User", "User")
+                        .WithMany("Roles")
+                        .HasForeignKey("IdUser")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -11,7 +11,7 @@ namespace Controle_Ponto_API.Controller
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private Service_User _service = new Service_User();
+        readonly ServiceUser _service = new ServiceUser();
 
         [AllowAnonymous]
         [HttpPost]

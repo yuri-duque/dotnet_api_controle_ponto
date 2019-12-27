@@ -1,15 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace Domain
 {
-    public class User
+    public class User : IdentityUser<long>
     {
-        public int Id { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
+        public IList<UserRoles> Roles { get; set; }
 
         public static void Map(ModelBuilder modelBuilder)
         {
@@ -18,7 +17,6 @@ namespace Domain
 
             map.Property(x => x.Id).ValueGeneratedOnAdd();
             map.Property(x => x.UserName).IsUnicode();
-            map.Property(x => x.Email).IsUnicode();
         }
 
         public static string Encrypt(string password)

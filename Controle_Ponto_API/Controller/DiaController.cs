@@ -9,9 +9,10 @@ namespace Controle_Ponto_API.Controller
     [ApiController]
     public class DiaController : ApiController
     {
-        private Service_Dia _service = new Service_Dia();
+        private ServiceDia _service = new ServiceDia();
 
         // GET: api/Dia
+        [Authorize("Bearer")]
         [HttpGet]
         public IActionResult GetAll()
         {

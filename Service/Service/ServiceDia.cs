@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace Service.Service
 {
-    public class Service_Dia
+    public class ServiceDia
     {
-        private Repository_Dia _repository = new Repository_Dia();
+        readonly RepositoryDia _repository = new RepositoryDia();
 
         public IEnumerable<Dia> GetAll()
         {

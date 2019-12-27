@@ -4,13 +4,15 @@ using Repository.EntitiesRepository;
 using Service.Identity;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
+using System.Security.Principal;
 
 namespace Service.Service
 {
-    public class Service_User
+    public class ServiceUser
     {
-        readonly Repository_User _repository = new Repository_User();
+        readonly RepositoryUser _repository = new RepositoryUser();
 
         public object Login(User usuario, SigningConfigurations signingConfigurations, TokenConfigurations tokenConfigurations)
         {
@@ -27,6 +29,14 @@ namespace Service.Service
                             new Claim(JwtRegisteredClaimNames.UniqueName, usuarioBase.UserName)
                         }
                     );
+
+                    if (usuarioBase.Roles.Any())
+                    {
+                        foreach (var item in usuarioBase.Roles)
+                        {
+                            identity.AddClaim(new Claim(ClaimTypes.Role, item.Role));
+                        }
+                    }
 
                     DateTime dataCriacao = DateTime.Now;
                     DateTime dataExpiracao = dataCriacao +

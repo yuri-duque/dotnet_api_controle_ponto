@@ -2,7 +2,7 @@
 
 namespace Service.Utils
 {
-    public class Data_Utils
+    public class DataUtils
     {
         public bool isfinalDeSemana(DateTime _data)
         {
