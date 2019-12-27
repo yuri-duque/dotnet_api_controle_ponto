@@ -22,6 +22,7 @@ namespace Repository.Contex
         {
             base.OnModelCreating(modelBuilder);
 
+            User.Map(modelBuilder);
             Dia.Map(modelBuilder);
             Registro.Map(modelBuilder);
         }
@@ -30,6 +31,7 @@ namespace Repository.Contex
             : base(option)
         { }
 
+        public DbSet<User> Users { get; set; }
         public DbSet<Dia> Dias { get; set; }
         public DbSet<Registro> Registros { get; set; }
     }

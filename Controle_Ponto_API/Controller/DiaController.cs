@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.Service;
 
@@ -6,7 +7,7 @@ namespace Controle_Ponto_API.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DiaController : ControllerBase
+    public class DiaController : ApiController
     {
         private Service_Dia _service = new Service_Dia();
 
